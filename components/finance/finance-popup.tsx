@@ -37,7 +37,7 @@ export function FinancePopup() {
               </div>
               <div>
                 <h3 className="text-2xl font-black text-white leading-tight mb-1 uppercase tracking-tighter">
-                  Need Finance Assistance?
+                  Make a Payment
                 </h3>
                 <div className="flex items-center gap-2">
                   <span className="relative flex h-3 w-3">
@@ -57,13 +57,13 @@ export function FinancePopup() {
                 <div className="bg-amber/20 p-1.5 text-amber">
                   <Zap size={16} />
                 </div>
-                <span className="text-sm font-bold text-white/90 uppercase tracking-tight">Instant Eligibility Check</span>
+                <span className="text-sm font-bold text-white/90 uppercase tracking-tight">Need Finance Assistance?</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="bg-amber/20 p-1.5 text-amber">
                   <CreditCard size={16} />
                 </div>
-                <span className="text-sm font-bold text-white/90 uppercase tracking-tight">Competitive Rates</span>
+                <span className="text-sm font-bold text-white/90 uppercase tracking-tight">Instant Eligibility Check</span>
               </div>
             </div>
 
