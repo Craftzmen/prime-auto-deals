@@ -227,7 +227,7 @@ export function Navbar() {
                     alt="Prime Auto Deals"
                     width={140}
                     height={35}
-                    className="h-12 w-auto brightness-100 invert grayscale-100"
+                    className="h-12 w-auto brightness-0 invert"
                   />
                 </SheetTitle>
               </SheetHeader>
