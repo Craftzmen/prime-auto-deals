@@ -73,12 +73,12 @@ export function Navbar() {
     >
       <div
         className={cn(
-          "border-b border-white/10 transition-all duration-300 overflow-hidden",
-          scrolled ? "max-h-0 opacity-0" : "max-h-40 md:max-h-12 opacity-100"
+          "border-b border-white/10 transition-all duration-300 overflow-hidden bg-navy dark:bg-navy/95",
+          "max-h-40 md:max-h-12 opacity-100"
         )}
       >
         <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-2 px-5 py-2 text-[10px] sm:text-xs md:flex-row md:justify-between md:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-white/70 md:justify-start md:gap-5">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-white/80 md:justify-start md:gap-5">
             <Link
               href="tel:+18883968739"
               title="Call (888) 396-8739"
@@ -96,7 +96,7 @@ export function Navbar() {
               query@primeautodeals.tech
             </Link>
           </div>
-          <span className="text-white/50 text-center md:text-right">
+          <span className="text-white/60 text-center md:text-right font-medium">
             Monday to Saturday: 8:00 AM – 6:00 PM
           </span>
         </div>
