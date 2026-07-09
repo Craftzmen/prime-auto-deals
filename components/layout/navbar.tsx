@@ -89,11 +89,11 @@ export function Navbar() {
             </Link>
             <span className="hidden text-white/30 md:inline">|</span>
             <Link
-              href="mailto:query@primeautodeals.tech"
+              href="mailto:query@primeautodeals.live"
               className="hidden md:flex items-center gap-1.5 transition-colors hover:text-white/80"
             >
               <MailIcon className="size-3" />
-              query@primeautodeals.tech
+              query@primeautodeals.live
             </Link>
           </div>
           <span className="hidden md:block text-white/90 text-center md:text-right font-medium">

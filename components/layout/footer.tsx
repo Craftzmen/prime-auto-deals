@@ -145,11 +145,11 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="mailto:query@primeautodeals.tech"
+                  href="mailto:query@primeautodeals.live"
                   className="flex items-center gap-3 text-sm text-white/50 transition-colors hover:text-amber"
                 >
                   <MailIcon className="size-4 shrink-0 text-amber" />
-                  query@primeautodeals.tech
+                  query@primeautodeals.live
                 </Link>
               </li>
             </ul>

@@ -133,10 +133,10 @@ export function RefundPolicyContent() {
               <li>
                 <span className="font-bold text-foreground">Email:</span>{" "}
                 <Link
-                  href="mailto:query@primeautodeals.tech"
+                  href="mailto:query@primeautodeals.live"
                   className="text-amber font-semibold hover:text-amber-dark transition-colors"
                 >
-                  query@primeautodeals.tech
+                  query@primeautodeals.live
                 </Link>
               </li>
               <li>
