@@ -23,7 +23,7 @@ export function FinanceCta() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-none bg-amber px-8 py-6 text-base text-navy font-bold hover:bg-amber-light"
+                className="rounded-none bg-emerald-500 px-8 py-6 text-base font-bold text-white shadow-[0_4px_28px_rgba(16,185,129,0.45)] ring-2 ring-emerald-300/40 hover:bg-emerald-400"
               >
                 <Link href={siteContact.phoneHref} title={`Call ${siteContact.phoneDisplay}`} className="inline-flex min-h-11 items-center">
                   <PhoneIcon className="mr-2 size-5" />

@@ -19,7 +19,7 @@ export function FinancePopup() {
       )}
     >
       <div className="relative">
-        <div className="relative bg-navy border-t-4 border-amber p-8 md:p-10 shadow-[0_30px_70px_rgba(0,0,0,0.5)] w-full md:w-[550px]">
+        <div className="relative bg-navy border-t-4 border-emerald-500 p-8 md:p-10 shadow-[0_30px_70px_rgba(0,0,0,0.5)] w-full md:w-[550px]">
           <button
             onClick={() => {
               setIsOpen(false)
@@ -33,7 +33,7 @@ export function FinancePopup() {
 
           <div className="flex flex-col">
             <div className="flex items-start gap-5 mb-8">
-              <div className="flex size-16 shrink-0 items-center justify-center bg-amber text-navy">
+              <div className="flex size-16 shrink-0 items-center justify-center bg-emerald-500 text-white shadow-lg shadow-emerald-500/40">
                 <Phone size={32} className="animate-pulse" />
               </div>
               <div>
@@ -53,15 +53,15 @@ export function FinancePopup() {
             </div>
 
             {/* Value Proposition List */}
-            <div className="space-y-4 mb-8 bg-white/5 p-5 border-l-2 border-amber/30">
+            <div className="space-y-4 mb-8 bg-white/5 p-5 border-l-2 border-emerald-500/50">
               <div className="flex items-center gap-3">
-                <div className="bg-amber/20 p-1.5 text-amber">
+                <div className="bg-emerald-500/20 p-1.5 text-emerald-400">
                   <Zap size={16} />
                 </div>
                 <span className="text-sm font-bold text-white/90 uppercase tracking-tight">Fast & Easy Application</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="bg-amber/20 p-1.5 text-amber">
+                <div className="bg-emerald-500/20 p-1.5 text-emerald-400">
                   <CreditCard size={16} />
                 </div>
                 <span className="text-sm font-bold text-white/90 uppercase tracking-tight">Instant Eligibility Check</span>
@@ -72,13 +72,13 @@ export function FinancePopup() {
               <a
                 href={siteContact.phoneHref}
                 title={`Call ${siteContact.phoneDisplay}`}
-                className="group relative flex min-h-11 w-full flex-col items-stretch justify-center bg-amber px-8 py-5 text-white hover:text-navy font-black text-xl transition-all duration-300 hover:bg-white active:opacity-90"
+                className="group relative flex min-h-11 w-full flex-col items-stretch justify-center bg-emerald-500 px-8 py-5 font-black text-xl text-white shadow-[0_4px_28px_rgba(16,185,129,0.45)] ring-2 ring-emerald-300/40 transition-all duration-300 hover:bg-emerald-400 active:opacity-90"
               >
                 <span className="flex items-center justify-between uppercase tracking-tighter">
                   Call {siteContact.phoneDisplay}
                   <Phone size={24} className="group-hover:rotate-12 transition-transform" />
                 </span>
-                <span className="mt-1 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 group-hover:text-navy/60">
+                <span className="mt-1 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-emerald-100">
                   Call Right Now
                 </span>
               </a>
