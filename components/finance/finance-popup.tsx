@@ -14,7 +14,7 @@ export function FinancePopup() {
   return (
     <div
       className={cn(
-        "fixed bottom-0 right-0 z-50 transition-all duration-700 ease-in-out transform md:bottom-8 md:right-8",
+        "fixed bottom-[5.75rem] right-0 z-50 transition-all duration-700 ease-in-out transform md:bottom-[6.5rem] md:right-8",
         isOpen ? "translate-y-0 opacity-100 scale-100" : "translate-y-full opacity-0 md:translate-y-10 pointer-events-none"
       )}
     >
