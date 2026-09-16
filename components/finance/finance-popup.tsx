@@ -72,7 +72,7 @@ export function FinancePopup() {
               <a
                 href={siteContact.phoneHref}
                 title={`Call ${siteContact.phoneDisplay}`}
-                className="group relative flex min-h-11 w-full flex-col items-stretch justify-center bg-emerald-500 px-8 py-5 font-black text-xl text-white shadow-[0_4px_28px_rgba(16,185,129,0.45)] ring-2 ring-emerald-300/40 transition-all duration-300 hover:bg-emerald-400 active:opacity-90"
+                className="group relative flex min-h-11 w-full flex-col items-stretch justify-center rounded-full bg-emerald-500 px-8 py-5 font-black text-xl text-white shadow-[0_4px_28px_rgba(16,185,129,0.45)] ring-2 ring-emerald-300/40 transition-all duration-300 hover:bg-emerald-400 active:opacity-90"
               >
                 <span className="flex items-center justify-between uppercase tracking-tighter">
                   Call {siteContact.phoneDisplay}
