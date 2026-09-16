@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { siteContact } from "@/lib/site-contact"
 import { PhoneIcon, ArrowRightIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/layout/section-wrapper"
@@ -35,7 +36,7 @@ export function CtaHowItWorks() {
                 size="lg"
                 className="rounded-none border-2 border-white bg-transparent px-8 py-6 text-base text-white hover:bg-white hover:text-navy"
               >
-                <Link href="tel:+18883968739" title="Call (888) 396-8739">
+                <Link href={siteContact.phoneHref} title={`Call ${siteContact.phoneDisplay}`} className="inline-flex min-h-11 items-center">
                   <PhoneIcon className="mr-2 size-5" />
                   Call Us Now
                 </Link>

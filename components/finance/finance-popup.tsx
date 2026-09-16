@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { X, Phone, Check, CreditCard, ShieldCheck, Zap } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { siteContact } from "@/lib/site-contact"
 
 export function FinancePopup() {
   const [isOpen, setIsOpen] = useState(true)
@@ -69,17 +70,18 @@ export function FinancePopup() {
 
             <div className="space-y-4">
               <a
-                href="tel:+18883968739"
-                title="Call (888) 396-8739"
-                className="group relative flex items-center justify-between bg-amber px-8 py-5 text-white hover:text-navy font-black text-xl transition-all duration-300 hover:bg-white hover:pl-10"
+                href={siteContact.phoneHref}
+                title={`Call ${siteContact.phoneDisplay}`}
+                className="group relative flex min-h-11 w-full flex-col items-stretch justify-center bg-amber px-8 py-5 text-white hover:text-navy font-black text-xl transition-all duration-300 hover:bg-white active:opacity-90"
               >
-                <span className="uppercase tracking-tighter">Call (888) 396-8739</span>
-                <Phone size={24} className="group-hover:rotate-12 transition-transform" />
+                <span className="flex items-center justify-between uppercase tracking-tighter">
+                  Call {siteContact.phoneDisplay}
+                  <Phone size={24} className="group-hover:rotate-12 transition-transform" />
+                </span>
+                <span className="mt-1 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 group-hover:text-navy/60">
+                  Call Right Now
+                </span>
               </a>
-
-              <p className="text-[10px] text-center text-white/40 uppercase tracking-[0.3em] font-bold">
-                Call Right Now
-              </p>
             </div>
           </div>
         </div>

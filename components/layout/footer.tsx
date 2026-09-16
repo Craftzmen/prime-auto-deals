@@ -1,9 +1,8 @@
 import Link from "next/link"
+import { siteContact } from "@/lib/site-contact"
 import Image from "next/image"
 import {
   PhoneIcon,
-  MailIcon,
-  MapPinIcon,
   ClockIcon,
   GlobeIcon,
   MessageCircleIcon,
@@ -127,29 +126,14 @@ export function Footer() {
               Contact Info
             </h3>
             <ul className="space-y-4">
-              <li className="flex gap-3">
-                <MapPinIcon className="mt-0.5 size-4 shrink-0 text-amber" />
-                <span className="text-sm text-white/50">
-                  1916 E 51ST Street 2FL, Brooklyn, NY 11234
-                </span>
-              </li>
               <li>
                 <Link
-                  href="tel:+18883968739"
-                  title="Call (888) 396-8739"
-                  className="flex items-center gap-3 text-sm text-white/50 transition-colors hover:text-amber"
+                  href={siteContact.phoneHref}
+                  title={`Call ${siteContact.phoneDisplay}`}
+                  className="flex min-h-11 w-full items-center gap-3 rounded-lg py-2 pr-2 text-sm text-white/50 transition-colors hover:text-amber active:opacity-90"
                 >
                   <PhoneIcon className="size-4 shrink-0 text-amber" />
-                  Call (888) 396-8739
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="mailto:query@primeautodeals.live"
-                  className="flex items-center gap-3 text-sm text-white/50 transition-colors hover:text-amber"
-                >
-                  <MailIcon className="size-4 shrink-0 text-amber" />
-                  query@primeautodeals.live
+                  <span className="font-medium">Call {siteContact.phoneDisplay}</span>
                 </Link>
               </li>
             </ul>

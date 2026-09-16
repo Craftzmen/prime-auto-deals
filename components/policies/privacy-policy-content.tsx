@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator"
 import { SectionWrapper } from "@/components/layout/section-wrapper"
 import Link from "next/link"
+import { siteContact } from "@/lib/site-contact"
 
 export function PrivacyPolicyContent() {
   return (
@@ -191,20 +192,13 @@ export function PrivacyPolicyContent() {
               If you have questions or concerns about this policy, contact us
               at:
             </p>
-            <ul className="space-y-4 text-base text-muted-foreground">
-              <li>
-                <span className="font-bold text-foreground">Email:</span>{" "}
-                <Link
-                  href="mailto:query@primeautodeals.live"
-                  className="text-amber font-semibold hover:text-amber-dark transition-colors"
-                >
-                  query@primeautodeals.live
-                </Link>
-              </li>
-              <li>
-                <span className="font-bold text-foreground">Address:</span> 1916 E 51ST Street 2FL, Brooklyn, NY 11234
-              </li>
-            </ul>
+            <Link
+              href={siteContact.phoneHref}
+              title={`Call ${siteContact.phoneDisplay}`}
+              className="inline-flex min-h-11 items-center text-base font-semibold text-amber hover:text-amber-dark transition-colors"
+            >
+              Call {siteContact.phoneDisplay}
+            </Link>
           </section>
         </div>
       </article>

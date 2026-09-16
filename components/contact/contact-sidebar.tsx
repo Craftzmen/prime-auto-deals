@@ -1,7 +1,7 @@
 import { ClockIcon, PhoneIcon, GlobeIcon, MessageCircleIcon, LinkIcon } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import Link from "next/link"
+import { siteContact } from "@/lib/site-contact"
 
 const hours = [
   { day: "Monday", time: "8:00 AM – 6:00 PM" },
@@ -71,12 +71,13 @@ export function ContactSidebar() {
             <p className="mb-8 text-base text-white/60">
               Call us for immediate assistance
             </p>
-            <Button
-              asChild
-              className="w-full h-14 rounded-none bg-amber text-base text-navy font-bold hover:bg-amber-light"
+            <Link
+              href={siteContact.phoneHref}
+              title={`Call ${siteContact.phoneDisplay}`}
+              className="flex min-h-14 w-full items-center justify-center rounded-none bg-amber text-base font-bold text-navy hover:bg-amber-light active:opacity-90"
             >
-              <Link href="tel:+18883968739" title="Call (888) 396-8739">Call (888) 396-8739</Link>
-            </Button>
+              Call {siteContact.phoneDisplay}
+            </Link>
           </div>
         </div>
       </ScrollReveal>

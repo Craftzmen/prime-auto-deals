@@ -16,9 +16,9 @@ import Image from "next/image"
 import {
   MenuIcon,
   PhoneIcon,
-  MailIcon,
   ChevronDownIcon,
 } from "lucide-react"
+import { siteContact } from "@/lib/site-contact"
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -80,20 +80,12 @@ export function Navbar() {
         <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-2 px-5 py-2 text-[10px] sm:text-xs md:flex-row md:justify-between md:px-8">
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-white md:justify-start md:gap-5">
             <Link
-              href="tel:+18883968739"
-              title="Call (888) 396-8739"
-              className="flex items-center gap-1.5 transition-colors hover:text-white/80 text-sm md:text-xs font-bold md:font-medium"
+              href={siteContact.phoneHref}
+              title={`Call ${siteContact.phoneDisplay}`}
+              className="flex min-h-11 items-center gap-1.5 px-2 transition-colors hover:text-white/80 text-sm md:text-xs font-bold md:font-medium"
             >
-              <PhoneIcon className="size-4 md:size-3" />
-              Call (888) 396-8739
-            </Link>
-            <span className="hidden text-white/30 md:inline">|</span>
-            <Link
-              href="mailto:query@primeautodeals.live"
-              className="hidden md:flex items-center gap-1.5 transition-colors hover:text-white/80"
-            >
-              <MailIcon className="size-3" />
-              query@primeautodeals.live
+              <PhoneIcon className="size-4 md:size-3 shrink-0" />
+              Call {siteContact.phoneDisplay}
             </Link>
           </div>
           <span className="hidden md:block text-white/90 text-center md:text-right font-medium">
@@ -191,7 +183,7 @@ export function Navbar() {
                 : "border-white text-white hover:bg-white/10"
             )}
           >
-            <Link href="tel:+18883968739" title="Call (888) 396-8739">
+            <Link href={siteContact.phoneHref} title={`Call ${siteContact.phoneDisplay}`}>
               <PhoneIcon className="size-5" />
             </Link>
           </Button>
@@ -201,7 +193,7 @@ export function Navbar() {
             size={'lg'}
             className="hidden bg-amber text-white font-semibold hover:bg-amber-light sm:inline-flex"
           >
-            <Link href="tel:+18883968739" title="Call (888) 396-8739">Get a Quote</Link>
+            <Link href={siteContact.phoneHref} title={`Call ${siteContact.phoneDisplay}`}>Get a Quote</Link>
           </Button>
 
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
@@ -272,9 +264,9 @@ export function Navbar() {
                     asChild
                     className="w-full rounded-full bg-amber text-navy font-semibold hover:bg-amber-light"
                   >
-                    <Link href="tel:+18883968739" title="Call (888) 396-8739">
+                    <Link href={siteContact.phoneHref} title={`Call ${siteContact.phoneDisplay}`}>
                       <PhoneIcon className="size-4" />
-                      Call (888) 396-8739
+                      Call {siteContact.phoneDisplay}
                     </Link>
                   </Button>
                 </div>

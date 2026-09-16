@@ -1,61 +1,27 @@
-import { MapPinIcon, PhoneIcon, MailIcon } from "lucide-react"
+import { PhoneIcon } from "lucide-react"
 import { SectionWrapper } from "@/components/layout/section-wrapper"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import Link from "next/link"
-
-const contactCards = [
-  {
-    icon: MapPinIcon,
-    title: "Visit Us",
-    primary: "1916 E 51ST Street 2FL",
-    secondary: "Brooklyn, NY 11234",
-  },
-  {
-    icon: PhoneIcon,
-    title: "Call Us",
-    primary: "Call (888) 396-8739",
-    secondary: "24/7 Available",
-    href: "tel:+18883968739",
-    titleAttr: "Call (888) 396-8739",
-  },
-  {
-    icon: MailIcon,
-    title: "Email Us",
-    primary: "query@primeautodeals.live",
-    secondary: "We reply within 24 hours",
-    href: "mailto:query@primeautodeals.live",
-    titleAttr: "Email us at query@primeautodeals.live",
-  },
-]
+import { siteContact } from "@/lib/site-contact"
 
 export function ContactCards() {
   return (
     <SectionWrapper>
-      <div className="grid gap-6 md:grid-cols-3">
-        {contactCards.map((card, i) => (
-          <ScrollReveal key={card.title} delay={i * 100}>
-            <div className="h-full border border-border bg-white text-center transition-colors hover:border-amber dark:bg-card p-10">
-              <div className="mx-auto mb-6 flex size-16 items-center justify-center bg-navy text-amber">
-                <card.icon className="size-6" />
-              </div>
-              <h3 className="mb-3 font-bold uppercase tracking-wider text-xl text-navy dark:text-white">{card.title}</h3>
-              {card.href ? (
-                <Link
-                  href={card.href}
-                  title={card.titleAttr}
-                  className="text-lg font-bold text-amber transition-colors hover:text-amber-dark"
-                >
-                  {card.primary}
-                </Link>
-              ) : (
-                <p className="text-lg font-bold text-foreground">{card.primary}</p>
-              )}
-              <p className="mt-2 text-sm text-muted-foreground font-medium">
-                {card.secondary}
-              </p>
+      <div className="mx-auto max-w-lg">
+        <ScrollReveal>
+          <Link
+            href={siteContact.phoneHref}
+            title={`Call ${siteContact.phoneDisplay}`}
+            className="flex min-h-[180px] w-full flex-col items-center justify-center border border-border bg-white p-10 text-center transition-colors hover:border-amber active:opacity-90 dark:bg-card"
+          >
+            <div className="mx-auto mb-6 flex size-16 items-center justify-center bg-navy text-amber">
+              <PhoneIcon className="size-6" />
             </div>
-          </ScrollReveal>
-        ))}
+            <h3 className="mb-3 text-xl font-bold uppercase tracking-wider text-navy dark:text-white">Call Us</h3>
+            <p className="text-lg font-bold text-amber">{siteContact.phoneDisplay}</p>
+            <p className="mt-2 text-sm font-medium text-muted-foreground">24/7 Available — tap to call</p>
+          </Link>
+        </ScrollReveal>
       </div>
     </SectionWrapper>
   )

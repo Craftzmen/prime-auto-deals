@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/layout/section-wrapper"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import Link from "next/link"
+import { siteContact } from "@/lib/site-contact"
 
 export function FinanceCta() {
   return (
@@ -24,7 +25,7 @@ export function FinanceCta() {
                 size="lg"
                 className="rounded-none bg-amber px-8 py-6 text-base text-navy font-bold hover:bg-amber-light"
               >
-                <Link href="tel:+18883968739" title="Call (888) 396-8739">
+                <Link href={siteContact.phoneHref} title={`Call ${siteContact.phoneDisplay}`} className="inline-flex min-h-11 items-center">
                   <PhoneIcon className="mr-2 size-5" />
                   Speak to an Advisor
                 </Link>
