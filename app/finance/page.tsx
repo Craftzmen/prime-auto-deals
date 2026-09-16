@@ -41,10 +41,11 @@ export const metadata: Metadata = {
 };
 
 import { FinancePopup } from "@/components/finance/finance-popup"
+import { CallNowBar } from "@/components/layout/call-now-bar"
 
 export default function FinancePage() {
   return (
-    <>
+    <div className="pb-28">
       <PageHeader
         title="Car Finance"
         breadcrumbs={[
@@ -60,6 +61,7 @@ export default function FinancePage() {
       <FinanceTestimonials />
       <FinanceCta />
       <FinancePopup />
-    </>
+      <CallNowBar />
+    </div>
   )
 }
